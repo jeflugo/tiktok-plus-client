@@ -20,7 +20,7 @@ const NAVIGATION_LINKS: TLink[] = [
 	},
 	{
 		name: 'Explore',
-		Icon: BsSearchHeartFill,
+		Icon: FaSearch,
 		link: '/explore',
 	},
 	{
@@ -57,12 +57,20 @@ export default function Navigation() {
 			)}
 			<div className='border-t-2 border-white bg-black text-white py-2'>
 				<div className='flex justify-evenly items-center'>
-					{NAVIGATION_LINKS.map(({ name, Icon, link }, index) => {
-						if (index === 2)
+					{NAVIGATION_LINKS.map(({ name, Icon, link }) => {
+						if (name === 'Create')
 							return (
 								<div>
 									<Link to={link}>
-										<Icon />
+										<div className='relative'>
+											<div className='h-6 w-9 absolute bg-blue-400 top-0 left-0 ml-[-5px] rounded' />
+											<div className='bg-white text-black w-9 rounded font-bold relative h-6 z-10'>
+												<div className='absolute top-[-2px] w-full text-center'>
+													+
+												</div>
+											</div>
+											<div className='h-6 w-9 absolute bg-red-500  top-0 right-0 mr-[-5px] rounded' />
+										</div>
 									</Link>
 								</div>
 							)
