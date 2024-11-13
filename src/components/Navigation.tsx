@@ -46,7 +46,7 @@ export default function Navigation() {
 		<div>
 			{search && (
 				<div className='bg-black/95 px-2 py-1 text-white'>
-					<div className='flex justify-between items-center'>
+					<div className='flex justify-between items-center cursor-pointer'>
 						<div className='flex gap-1 items-center'>
 							<FaSearch />
 							<span>Search - asdasd</span>
